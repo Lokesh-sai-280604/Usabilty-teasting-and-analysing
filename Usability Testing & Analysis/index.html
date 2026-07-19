@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usability Testing & Analysis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Usability Testing & Analysis</h1>
+    <p>Evaluate Digital Product Usability</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Test Plan</h2>
+
+        <label>Product Name</label>
+        <input type="text" id="product">
+
+        <label>Test Goal</label>
+        <textarea id="goal"></textarea>
+
+        <label>Scenario</label>
+        <textarea id="scenario"></textarea>
+
+        <button onclick="savePlan()">Save Plan</button>
+    </div>
+
+    <div class="card">
+        <h2>User Feedback</h2>
+
+        <label>User Name</label>
+        <input type="text" id="username">
+
+        <label>Ease of Use (1-5)</label>
+        <input type="number" min="1" max="5" id="rating">
+
+        <label>Observation</label>
+        <textarea id="observation"></textarea>
+
+        <label>Suggestion</label>
+        <textarea id="suggestion"></textarea>
+
+        <button onclick="addFeedback()">Add Feedback</button>
+    </div>
+
+</div>
+
+<div class="report">
+
+<h2>Usability Report</h2>
+
+<div id="plans"></div>
+
+<table>
+<thead>
+<tr>
+<th>User</th>
+<th>Rating</th>
+<th>Observation</th>
+<th>Suggestion</th>
+</tr>
+</thead>
+
+<tbody id="feedbackTable"></tbody>
+
+</table>
+
+<h3 id="average"></h3>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
